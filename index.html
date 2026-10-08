@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spoorthi | BCA Graduate, Hassan, Karnataka</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F8FB;--surface:#FFFFFF;--ink:#1D2B3A;--muted:#566677;--line:#DEE6EE;--peri:#5B6CFF;--mint:#CDEFE3;--apricot:#FFDCC4;--sky:#D9E0FF;--navbg:rgba(255,255,255,.85);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1722;--surface:#17212F;--ink:#EAF0F7;--muted:#9FB0C2;--line:#27364A;--peri:#8E9BFF;--mint:#1D4036;--apricot:#4A3324;--sky:#262E5E;--navbg:rgba(23,33,47,.88)}}
+:root[data-theme="dark"]{--bg:#0F1722;--surface:#17212F;--ink:#EAF0F7;--muted:#9FB0C2;--line:#27364A;--peri:#8E9BFF;--mint:#1D4036;--apricot:#4A3324;--sky:#262E5E;--navbg:rgba(23,33,47,.88)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.7 'DM Sans',system-ui,sans-serif}
+h1,h2,h3{font-family:Sora,system-ui,sans-serif;margin:0;line-height:1.1;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--peri);outline-offset:3px;border-radius:8px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+#bar{position:fixed;top:0;left:0;height:4px;width:0;background:var(--peri);z-index:20}
+.nav{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));left:50%;transform:translateX(-50%);z-index:10;display:flex;gap:4px;padding:6px;background:var(--navbg);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:999px;max-width:calc(100% - 24px)}
+.nav a{text-decoration:none;font-weight:500;font-size:15px;padding:8px 16px;border-radius:999px;color:var(--muted);white-space:nowrap;transition:background .25s,color .25s}
+.nav a:hover{color:var(--ink)}
+.nav a.on{background:var(--peri);color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 72px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:center;width:100%}
+.place{display:inline-block;background:var(--mint);padding:6px 16px;border-radius:999px;font-weight:700;font-size:14px;margin-bottom:22px;color:var(--ink)}
+.hero h1{font-size:clamp(3.4rem,10vw,6.8rem);font-weight:700}
+.hero .role{font:600 clamp(1.15rem,2.6vw,1.5rem)/1.35 Sora,sans-serif;color:var(--peri);margin:16px 0}
+.hero .intro{max-width:50ch;color:var(--muted);margin:0 0 32px}
+.btn{display:inline-block;padding:14px 28px;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid var(--ink);transition:transform .2s,background .2s,color .2s}
+.btn.solid{background:var(--ink);color:var(--bg)}
+.btn.solid:hover{background:var(--peri);border-color:var(--peri);color:#fff}
+.btn.line:hover{background:var(--ink);color:var(--bg)}
+.btn.line{margin-left:10px}
+.art{position:relative;max-width:400px;justify-self:center;width:100%;aspect-ratio:1}
+.art .disc{position:absolute;inset:8%;border-radius:50%;background:var(--apricot)}
+.art .disc2{position:absolute;width:34%;aspect-ratio:1;right:2%;top:4%;border-radius:50%;background:var(--sky)}
+.art svg{position:absolute;inset:0;width:100%;height:100%;color:var(--peri)}
+.art g{transform-origin:200px 200px;animation:turn 80s linear infinite}
+@keyframes turn{to{transform:rotate(360deg)}}
+section{padding:96px 0}
+h2{font-size:clamp(2rem,4.5vw,2.8rem);margin-bottom:12px}
+.lead{color:var(--muted);max-width:56ch;margin:0 0 40px}
+.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.proj{border-radius:28px;padding:32px;display:flex;flex-direction:column;min-height:280px;transition:transform .25s}
+.proj:hover{transform:translateY(-6px)}
+.proj:nth-child(1){background:var(--mint)}.proj:nth-child(2){background:var(--apricot)}.proj:nth-child(3){background:var(--sky)}
+.proj h3{font-size:1.4rem;margin-bottom:10px}
+.proj p{margin:0 0 16px;flex:1}
+.proj .tools{font-weight:700;font-size:14px;margin-bottom:14px}
+.proj a{font-weight:700;text-decoration:none;border-bottom:2px solid var(--ink);align-self:flex-start}
+.skills{display:flex;flex-wrap:wrap;gap:14px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:18px 26px;min-width:150px;transition:border-color .2s}
+.skill:hover{border-color:var(--peri)}
+.skill b{display:block;font:700 1.35rem Sora,sans-serif}
+.skill span{font-size:14px;color:var(--muted)}
+.edu .box{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.edu h3{font-size:1.8rem;margin-bottom:8px}
+.edu p{margin:0;color:var(--muted)}
+.edu .college{color:var(--ink);font-weight:700;font-size:1.2rem}
+.contact .links{display:flex;flex-wrap:wrap;gap:12px}
+.contact .btn.line{margin-left:0}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:15px}
+@media(max-width:780px){.hero .wrap,.edu .box{grid-template-columns:1fr}.art{max-width:240px;order:-1}.hero{padding-top:100px}.nav a{padding:8px 11px;font-size:14px}.edu .box{padding:28px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.art g{animation:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+<nav class="nav" aria-label="Main">
+<a href="#top" class="on">Home</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#education">Education</a><a href="#contact">Contact</a>
+</nav>
+<main>
+<div id="top" class="hero"><div class="wrap">
+<div>
+<span class="place">Hassan, Karnataka, India</span>
+<h1>Spoorthi</h1>
+<p class="role">BCA graduate and aspiring software developer</p>
+<p class="intro">I build clean, working programs and websites. I completed my Bachelor of Computer Applications at Central Commerce College, Hassan, and I'm ready to start my career in IT.</p>
+<a class="btn solid" href="#work">View my work</a><a class="btn line" href="#contact">Contact me</a>
+</div>
+<div class="art" role="img" aria-label="Star-shaped pattern inspired by the Hoysala temples of Hassan">
+<div class="disc"></div><div class="disc2"></div>
+<svg viewBox="0 0 400 400" fill="none" stroke="currentColor" stroke-width="2"><g>
+<rect x="90" y="90" width="220" height="220"/>
+<rect x="90" y="90" width="220" height="220" transform="rotate(15 200 200)"/>
+<rect x="90" y="90" width="220" height="220" transform="rotate(30 200 200)"/>
+<rect x="90" y="90" width="220" height="220" transform="rotate(45 200 200)"/>
+<rect x="90" y="90" width="220" height="220" transform="rotate(60 200 200)"/>
+<rect x="90" y="90" width="220" height="220" transform="rotate(75 200 200)"/>
+</g><circle cx="200" cy="200" r="9" fill="currentColor" stroke="none"/></svg>
+</div>
+</div></div>
+
+<section id="work"><div class="wrap">
+<h2>My work</h2>
+<p class="lead">A selection of projects from my BCA studies. Replace the sample text with your own project details.</p>
+<div class="projects">
+<article class="proj"><h3>Final-year project</h3><p>Sample text: describe your main BCA project and the problem it solves in one or two sentences.</p><div class="tools">Add tools used</div><a href="#">View project</a></article>
+<article class="proj"><h3>Website project</h3><p>Sample text: describe a website you built with HTML, CSS and PHP, and what it does.</p><div class="tools">HTML, CSS, PHP</div><a href="#">View project</a></article>
+<article class="proj"><h3>Programming project</h3><p>Sample text: describe a program you wrote in C, Java or Python, and what you learned.</p><div class="tools">C, Java, Python</div><a href="#">View project</a></article>
+</div></div></section>
+
+<section id="skills"><div class="wrap">
+<h2>Skills</h2>
+<p class="lead">The languages and tools I work with.</p>
+<div class="skills">
+<div class="skill"><b>C</b><span>Programming basics</span></div>
+<div class="skill"><b>Java</b><span>Object-oriented programs</span></div>
+<div class="skill"><b>Python</b><span>Scripts and problem solving</span></div>
+<div class="skill"><b>HTML</b><span>Page structure</span></div>
+<div class="skill"><b>CSS</b><span>Layout and styling</span></div>
+<div class="skill"><b>PHP</b><span>Server-side web pages</span></div>
+</div></div></section>
+
+<section id="education" class="edu"><div class="wrap"><div class="box">
+<div><h3>Education</h3><p>Bachelor of Computer Applications (BCA), completed.</p></div>
+<div><p class="college">Central Commerce College</p><p>Hassan, Karnataka, India</p></div>
+</div></div></section>
+
+<section id="contact" class="contact"><div class="wrap">
+<h2>Let's work together</h2>
+<p class="lead">I'm open to internships, entry-level roles and freelance projects. Send me a message.</p>
+<div class="links"><a class="btn solid" href="mailto:your-email@example.com">Email me</a><a class="btn line" href="https://www.linkedin.com/">LinkedIn</a><a class="btn line" href="https://github.com/">GitHub</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">© 2026 Spoorthi. Hassan, Karnataka, India.</div></footer>
+<script>
+(function(){
+var links=[].slice.call(document.querySelectorAll('.nav a'));
+var ids=links.map(function(a){return a.getAttribute('href').slice(1)});
+var bar=document.getElementById('bar');
+function update(){
+var h=document.documentElement;
+var max=h.scrollHeight-h.clientHeight;
+bar.style.width=(max>0?(h.scrollTop/max)*100:0)+'%';
+var cur=ids[0],y=h.scrollTop+window.innerHeight*0.35;
+ids.forEach(function(id){var el=document.getElementById(id);if(el&&el.offsetTop<=y)cur=id});
+if(max>0&&h.scrollTop>=max-4)cur=ids[ids.length-1];
+links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+}
+window.addEventListener('scroll',update,{passive:true});
+window.addEventListener('resize',update);
+update();
+})();
+</script>
+</body>
+</html>
